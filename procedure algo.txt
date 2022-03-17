@@ -1,0 +1,39 @@
+PROCEDURE dot-product(v1:arrayof-integer , v2:array-of-integer , var ps:float 
+BEGIN
+
+FOR i FROM 0 TO 2  DO
+    ps = ps +(v1[i]*v2[i])
+ENDFOR
+END
+
+
+
+
+
+ALGORITHM algorithm produit scalaire
+VAR
+     v1:array-of-inetegr[3],
+     v2:array-of-inetegr[3]
+BEGIN
+    write('donner les 3 composants du 1er vecteur sou tableau')
+    FOR i FROM 0 TO 2  DO
+        read(v1[i])
+    END_FOR
+
+    write('donner les 3 composants du 2eme vecteur ou tableau')
+    FOR i FROM 0 TO 2  DO
+        read(v2[i])
+    END_FOR
+
+
+dot-product(v1,v2,ps)
+
+
+IF (ps=0) THEN
+      write('les vecteurs sont ortho')
+ELSE
+     write('les vecteurs non ortho')
+END_IF
+
+
+END
